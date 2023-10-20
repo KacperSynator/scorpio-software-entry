@@ -1,5 +1,6 @@
 <launch>
-  <node name="virtual_dc_motor" pkg="virtual_dc_motor" type="virtual_dc_motor" output="screen" respawn="true"></node>
-  <node name="velocity_sensor_node" pkg="virtual_dc_motor" type="velocity_sensor_node" output="screen" respawn="true"></node>
+  <node name="virtual_dc_motor" pkg="virtual_dc_motor" type="virtual_dc_motor" output="log" respawn="true"></node>
+  <node name="velocity_sensor_node" pkg="virtual_dc_motor" type="velocity_sensor_node" output="log" respawn="true"></node>
+  <node name="velocity_controller_node" pkg="virtual_dc_motor" type="velocity_controller_node" output="log" respawn="true"></node>
   <!-- You can add your nodes here to launch them! :) -->
 </launch>

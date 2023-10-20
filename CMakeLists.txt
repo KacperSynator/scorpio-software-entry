@@ -9,13 +9,14 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   roscpp
   std_msgs
+  control_toolbox
 )
 
 catkin_package()
 
 include_directories(
   ${catkin_INCLUDE_DIRS}
-  ${CMAKE_SOURCE_DIR}/include/virtual_dc_motor
+  ${CMAKE_CURRENT_SOURCE_DIR}/include/virtual_dc_motor
 )
 
 catkin_install_python(PROGRAMS
@@ -27,3 +28,6 @@ target_link_libraries(virtual_dc_motor ${catkin_LIBRARIES})
 
 add_executable(velocity_sensor_node src/velocity_sensor_node.cpp)
 target_link_libraries(velocity_sensor_node ${catkin_LIBRARIES})
+
+add_executable(velocity_controller_node src/velocity_controller_node.cpp)
+target_link_libraries(velocity_controller_node control_toolbox ${catkin_LIBRARIES})

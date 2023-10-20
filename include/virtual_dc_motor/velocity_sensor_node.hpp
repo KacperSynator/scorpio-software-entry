@@ -16,6 +16,6 @@ class VelocitySensorNode {
     ros::Subscriber sub_;
     ros::Publisher pub_;
     ros::Rate loop_rate_;
-
+    ros::Time last_time_;
     uint16_t last_encoder_value_;
 };
