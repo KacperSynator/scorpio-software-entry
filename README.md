@@ -1,16 +1,30 @@
 # Projekt Scorpio - zadanie rekrutacyjne do działu Software
 
+## Instalacja control_toolbox
+```bash
+wstool init src
+rosinstall_generator control_toolbox --rosdistro noetic --deps --wet-only --tar > control_toolbox.rosinstall
+wstool merge -t src control_toolbox.rosinstall
+wstool update -t src
+
+rosdep install --from-paths src --ignore-src --rosdistro noetic -y
+catkin build
+```
+
 Cześć! 
 Przed Tobą opis zadania rekrutacyjnego do naszego koła naukowego! :)
 Celem zadania jest stworzenie oprogramowania obsługującego stworzony przez nas symulator silnika z enkoderem. W zadaniu trzeba skorzystać z Robot Operating System (ROS). 
 >**Uwaga!** Przed przystąpieniem do realizacji zadania przeczytaj **całe** README.
 ## Spis treści
-- [Zadania do wykonania](#zadania-do-wykonania)
-- [Specyfikacja techniczna zadania](#specyfikacja-techniczna-zadania)
-  - [Dane ogólne](#dane-ogólne)
-  - [Specyfikacja danych](#specyfikacja-danych)
-  - [Uruchamianie symulatora](#uruchamianie-symulatora)
-- [Wskazówki i przydatne linki](#wskazówki-i-przydatne-linki)
+- [Projekt Scorpio - zadanie rekrutacyjne do działu Software](#projekt-scorpio---zadanie-rekrutacyjne-do-działu-software)
+  - [Instalacja control\_toolbox](#instalacja-control_toolbox)
+  - [Spis treści](#spis-treści)
+  - [Zadania do wykonania](#zadania-do-wykonania)
+  - [Specyfikacja techniczna zadania](#specyfikacja-techniczna-zadania)
+    - [Dane ogólne](#dane-ogólne)
+    - [Specyfikacja danych](#specyfikacja-danych)
+    - [Uruchamianie symulatora](#uruchamianie-symulatora)
+  - [Wskazówki i przydatne linki](#wskazówki-i-przydatne-linki)
 ## Zadania do wykonania 
 W tej części znajdziesz ogólny opis zadań, szczegółowy opis wraz ze specyfikacją techniczną znajdziesz w sekcji [specyfikacja techniczna zadania](#specyfikacja-techniczna-zadania).
 
